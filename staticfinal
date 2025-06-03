@@ -1,0 +1,35 @@
+public class staticfinal {
+    static int x=10;
+    int y=20;
+    final int z=40;
+    void display(){
+        System.out.println("X= "+x);
+        System.out.println("Y= "+y);
+        System.out.println("Z= "+z);
+    }
+}
+class static_demo{
+    public static void main(String[] args) {
+        staticfinal o1 = new staticfinal();
+        staticfinal o2 = new staticfinal();
+        ++o1.x;
+        ++o2.y;
+        System.out.println("Obj1 :");
+        o1.display();
+        System.out.println("Obj2 :");
+        o2.display();
+    }
+}
+
+
+
+o/p
+Obj1 :
+X= 11
+Y= 20
+Z= 40
+Obj2 :
+X= 11
+Y= 21
+Z= 40
+Disconnected from the target VM, address: '127.0.0.1:50411', transport: 'socket'
