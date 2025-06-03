@@ -41,5 +41,22 @@
         }
     }
 
+o/p
+Default constructor:-
+Student 1 Details:
+USN: 4N147875
+Name: Ravi
+Semester: 2
+Mark: 70, 70, 70
+Average of marks: 70.0
+======================================
+Parameterized constructor:-
+Student 2 Details:
+USN: 4N187687
+Name: Varun
+Semester: 3
+Mark: 85, 70, 90
+Average of marks: 81.66666666666667
+Disconnected from the target VM, address: '127.0.0.1:50476', transport: 'socket'
 
 
