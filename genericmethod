@@ -1,0 +1,24 @@
+public class genericex {
+    public static <T> void printArray(T[] array) {
+        for(T element:array){
+            System.out.println(element);
+        }
+    }
+
+    public static void main(String[] args) {
+        Integer[] inta={1,2,3,4};
+        String[] sa={"Hello","World"};
+        printArray(inta);
+        printArray(sa);
+    }
+}
+
+o/p-
+
+1
+2
+3
+4
+Hello
+World
+
