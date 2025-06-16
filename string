@@ -1,0 +1,47 @@
+public class hello {
+    public static void main(String[] args) {
+        String s = new String("Hello");
+        System.out.println(s.length());
+        System.out.println(s.charAt(2));
+        System.out.println(s.concat("World"));
+        System.out.println(s.contains("Hello"));
+        System.out.println(s.replace('l', 'x'));
+        System.out.println(s.substring(1));
+        System.out.println(s.toLowerCase());
+        System.out.println(s.toUpperCase());
+        System.out.println(s.equalsIgnoreCase("hello"));
+        System.out.println(s.compareTo("Hello"));
+        String s1="   Hello   ";
+        System.out.println(s1.trim());
+        System.out.println();
+
+
+        StringBuffer s2=new StringBuffer("Hello");
+        System.out.println(s2.append(" World"));
+        System.out.println(s2.insert(5,11));
+        System.out.println(s2.delete(5,11));
+        System.out.println(s2.reverse());
+    }
+}
+
+
+o/p-
+
+5
+l
+HelloWorld
+true
+Hexxo
+ello
+hello
+HELLO
+true
+0
+Hello
+
+Hello World
+Hello11 World
+Hellold
+dlolleH
+
+Process finished with exit code 0
