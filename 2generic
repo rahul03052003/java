@@ -1,0 +1,29 @@
+public class pair <T,U> {
+    T value;
+    U value1;
+    public pair(T value,U value1){
+        this.value=value;
+        this.value1=value1;
+    }
+    public T getValue(){
+        return value;
+    }
+    public U getValue1(){
+        return value1;
+    }
+    public void setValue(){
+        this.value=value;
+    }
+
+    public static void main(String[] args) {
+        pair<Integer,String> Pair=new pair<>(1,"Ravi");
+        pair<String,Boolean> Pair1=new pair<>("Bullet",true);
+        System.out.println(Pair.getValue()+"  "+ Pair.getValue1());
+        System.out.println(Pair1.getValue()+"  "+ Pair1.getValue1());
+    }
+}
+
+
+o/p-
+1  Ravi
+Bullet  true
