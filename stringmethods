@@ -1,16 +1,21 @@
 public class stringmethod {
     public static void main(String[] args) {
+        int a=10;
         String str = "Hello, Java World!";
         char ch[]={'s','t','r','i','n','g'};
         String str2=new String(ch);
         System.out.println(str2);
+        String m=String.valueOf("Value of: "+a);
+        System.out.println(m);
         System.out.println("Length: " + str.length());
         System.out.println("Character at index 7: " + str.charAt(7));
         System.out.println("Substring (7 to 11): " + str.substring(7, 11));
         System.out.println("Uppercase: " + str.toUpperCase());
         System.out.println("Lowercase: " + str.toLowerCase());
         System.out.println("Index of 'Java': " + str.indexOf("Java"));
-
+        System.out.println("Replace l to x: "+str.replace('l','x'));
+        System.out.println("Repeat: "+str.repeat(2));
+        System.out.println("Concatenation: "+str.concat(str2));
         String anotherStr = "hello, java world!";
         System.out.println("Equals: " + str.equals(anotherStr));
         System.out.println("Equals ignoring case: " + str.equalsIgnoreCase(anotherStr));
@@ -20,11 +25,16 @@ public class stringmethod {
 
 o/p
 string
+10
 Length: 18
 Character at index 7: J
 Substring (7 to 11): Java
 Uppercase: HELLO, JAVA WORLD!
 Lowercase: hello, java world!
 Index of 'Java': 7
+Replace l to x: Hexxo, Java Worxd!
+Repeat: Hello, Java World!Hello, Java World!
+Concatenation: Hello, Java World!string
 Equals: false
 Equals ignoring case: true
+
