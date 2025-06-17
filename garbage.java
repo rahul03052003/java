@@ -9,13 +9,23 @@ class garbage {
 public class garbages{
     public static void main(String[] args)
     {
-        garbage g=new garbage();
-        g=null;
-        System.gc();
+        //garbage g=new garbage(); //first way
+       // g=null;
+        //System.gc();
+
+       // new garbage();  //second way
+        // System.gc();
+
+        garbage g1=new garbage();  //third way
+        g1.finalize();
+
+
         System.out.println("End of main method");
     }
 
-    }
+}
+
+
 
 
 
