@@ -1,0 +1,36 @@
+abstract class shape2 {
+    int a,b;
+    abstract void area();
+}
+class triangle1 extends shape2{
+    void area(){
+        System.out.println("Triangle area:- "+0.5*a*b);
+    }
+}
+class rectangle1 extends shape2{
+    void area(){
+        System.out.println("Rectangle area:- "+a*b);
+    }
+}
+class shape1{
+    public static void main(String[] args) {
+        shape2 s[]=new shape2[2];
+        s[0]=new triangle1();
+        s[0].a=20;
+        s[0].b=10;
+
+        s[1]=new rectangle1();
+        s[1].a=5;
+        s[1].b=10;
+
+        for(int i=0;i<s.length;i++){
+            s[i].area();
+        }
+    }
+}
+
+
+o/p
+
+Triangle area:- 100.0
+Rectangle area:- 50
