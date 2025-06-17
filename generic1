@@ -1,0 +1,21 @@
+class box<T>{
+    T value;
+    public void set(T value){
+        this.value=value;
+    }
+    public T get(){
+        return value;
+    }
+}
+public class generic1 {
+    public static void main(String[] args) {
+        box<Integer> intb=new <Integer> box();
+        intb.set(100);
+        System.out.println(intb.get());
+    }
+
+}
+
+
+o/p
+100
