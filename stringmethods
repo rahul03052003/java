@@ -1,7 +1,9 @@
 public class stringmethod {
     public static void main(String[] args) {
         String str = "Hello, Java World!";
-
+        char ch[]={'s','t','r','i','n','g'};
+        String str2=new String(ch);
+        System.out.println(str2);
         System.out.println("Length: " + str.length());
         System.out.println("Character at index 7: " + str.charAt(7));
         System.out.println("Substring (7 to 11): " + str.substring(7, 11));
@@ -17,6 +19,7 @@ public class stringmethod {
 
 
 o/p
+string
 Length: 18
 Character at index 7: J
 Substring (7 to 11): Java
