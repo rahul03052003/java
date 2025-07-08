@@ -1,11 +1,13 @@
+import java.util.Scanner;
 
+// Custom exception for insufficient balance
 class InsufficientBalanceException extends Exception {
     public InsufficientBalanceException(String message) {
         super(message);
     }
 }
 
-
+// BankAccount class
 class BankAccount {
     private double balance;
     private static final double MIN_BALANCE = 500.0;
@@ -17,7 +19,7 @@ class BankAccount {
     public void withdraw(double amount) throws InsufficientBalanceException {
         if ((balance - amount) < MIN_BALANCE) {
             throw new InsufficientBalanceException(
-                    "Withdrawal denied: Minimum balance of ₹500 must be maintained."
+                "Withdrawal denied: Minimum balance of ₹500 must be maintained."
             );
         }
         balance -= amount;
@@ -29,15 +31,27 @@ class BankAccount {
     }
 }
 
-
-public class BackDemo {
+// Main class to run the app
+public class BankDemo {
     public static void main(String[] args) {
-        BankAccount account = new BankAccount(1000.0);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter initial balance: ₹");
+        double initialBalance = scanner.nextDouble();
+
+        BankAccount account = new BankAccount(initialBalance);
+
+        System.out.print("Enter withdrawal amount: ₹");
+        double withdrawalAmount = scanner.nextDouble();
+
         try {
-            account.withdraw(600.0); // Try withdrawing ₹600
+            account.withdraw(withdrawalAmount);
         } catch (InsufficientBalanceException e) {
             System.out.println("Transaction Error: " + e.getMessage());
         }
-        System.out.println("Total Balance: "+account.getBalance());
+
+        System.out.println("Total Balance: ₹" + account.getBalance());
+
+        scanner.close();
     }
 }
