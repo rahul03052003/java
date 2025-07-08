@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // Custom exception for invalid phone numbers
 class InvalidPhoneNumberException extends Exception {
     public InvalidPhoneNumberException(String message) {
@@ -16,14 +18,19 @@ class PhoneValidator {
 }
 
 // Main class to run the program
-public class RecruimentApp {
+public class RecruitmentApp {
     public static void main(String[] args) {
-        String applicantPhone = "98765432"; // 👈 Try changing this to test
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter applicant phone number: ");
+        String applicantPhone = scanner.nextLine();
 
         try {
             PhoneValidator.validatePhoneNumber(applicantPhone);
         } catch (InvalidPhoneNumberException e) {
             System.out.println("Validation Error: " + e.getMessage());
         }
+
+        scanner.close();
     }
 }
